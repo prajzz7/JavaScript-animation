@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<style>
+			#but{
+				margin-top:450px;
+				}
+			#container{
+						width:400px;
+						height:400px;
+						position:absolute;
+						
+					  background-color:Yellow;
+					  }
+			#animation{
+						width:50px;
+						height:50px;
+						position:absolute;
+						background-color:red;
+					  }
+		</style>
+	</head>
+
+	<body>
+		
+		<div id='container'></div>
+		<div id='animation'></div>
+<button id='but' onclick="move()">Click</button>
+		
+		<script>
+			function move(){
+				var elem=document.getElementById("animation");
+				var pos=0;
+				var id=setInterval(frame,10);
+				function frame(){
+					if (pos==358){
+						clearInterval(id);
+						}
+					else{
+						pos++;
+						elem.style.top=pos + 'px'
+						elem.style.left=pos + 'px'
+					}
+				
+				}
+			}
+		</script>
+		
+	</body>
+
+</html>
